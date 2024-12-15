@@ -1,6 +1,7 @@
 import { Box, Button, Container, Heading, Input, Link, Textarea } from '@chakra-ui/react'
 import React, { useState } from 'react'
 // import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser'
 // import { Hero } from '../../Components/Hero/Hero'
 
 import { BiMailSend, BiPhoneCall } from 'react-icons/bi'
