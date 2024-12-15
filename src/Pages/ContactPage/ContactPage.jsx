@@ -50,7 +50,7 @@ const ContactPage = () => {
       // console.log('dois')
       try {
         // init('T6UiuUR6DYaW01m4R')
-        send(
+        emailjs.send(
           // import.meta.env.SERVICE_ID, // Replace with your EmailJS Service ID
           'service_vzaogtz', //import.meta.env.TEMPLATE_ID, // Replace with your EmailJS Template ID
           'template_wrjpk88',
