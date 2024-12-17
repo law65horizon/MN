@@ -68,7 +68,7 @@ const AboutPage = () => {
   return (
     <Box> 
         {/* <Hero backgroundImage={'../../../public/why-choose-us.jpg'}/> */}
-        <Hero backgroundImage={'/why-choose-us.jpg'} heading={'Welcome to michaeldev.com'} text={hero_text} 
+        <Hero backgroundImage={'/why-choose-us.webp'} heading={'Welcome to michaeldev.com'} text={hero_text} 
          button={{text: 'get started', link: '/contact'}}
         />
         <Box px={{base: 2, md: 9}} pt={8} pb={'40px'} display={'flex'} justifyContent={{base: 'center', xl: 'normal'}} gap={5} 

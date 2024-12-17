@@ -61,7 +61,7 @@ const HomePage = () => {
   ]
   return (
     <Box>
-      <Hero backgroundImage={'/home-hero-bg.jpg'} heading={'Create Amazing Business Websites'} text={hero_text} button={{text: 'get started', link: '/contact'}}/>
+      <Hero backgroundImage={'/home-hero-bg.webp'} heading={'Create Amazing Business Websites'} text={hero_text} button={{text: 'get started', link: '/contact'}}/>
 
       <Box px={2} py={8}>
         <Heading textAlign={'center'} textTransform={'capitalize'}>How I can help you</Heading>

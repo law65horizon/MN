@@ -68,7 +68,7 @@ const ContactPage = () => {
     }
   return (
     <Box>
-        <Hero backgroundImage={`/about-bg-img.jpg`} heading={'Contact for Premium Business Services'} text={hero_text}/>
+        <Hero backgroundImage={`/about-bg-img.webp`} heading={'Contact for Premium Business Services'} text={hero_text}/>
         {/* <Hero backgroundImage={'../../../public/why-choose-us.jpg'}/> */}
 
         <Container maxW={'8xl'} pt={8}>
