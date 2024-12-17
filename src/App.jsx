@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 // import PageLayout from './PageLayout/PageLayout'
 import { Navigate, Route, Routes } from 'react-router-dom'
@@ -10,11 +8,6 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import AboutPage from './Pages/AboutPage/AboutPage'
 import ContactPage from './Pages/ContactPage/ContactPage'
 
-function useSubdomain() {
-  const {hostname} = window.location
-  const subdomain = hostname.split('.')[0]
-  return subdomain
-}
 
 function App() {
 

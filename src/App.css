@@ -1,3 +1,4 @@
+/* font-size */
 .active_button {
   background-color: #CBD5E0 !important;
   border-bottom: 2px solid rgb(26 62 52);;
@@ -24,7 +25,7 @@
   
   html, body {
     height: 100%;
-    font-size: clamp(14px, 2vw, 20px);
+    /* font-size: clamp(14px, 2vw, 20px); */
   }
   body {
     /* font-family: 'Inter', sans-serif; */
@@ -91,6 +92,8 @@
   width: 98%;
   height: 95%;
   border-radius: 20px;
+  /* loading: lazy; */
+  /* loading */
 }
 .hero::before {
   content: "";

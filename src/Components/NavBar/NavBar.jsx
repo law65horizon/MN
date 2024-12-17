@@ -1,24 +1,15 @@
 import { Box, Button, Container, Divider, Flex, Heading, ListItem, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, OrderedList, Text, Tooltip, Link, UnorderedList, useDisclosure, useMediaQuery, VStack, Image, Center } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-import { BsHammer, BsHouse } from 'react-icons/bs'
-import { CgToggleSquare } from 'react-icons/cg'
 import { Link as RouterLink, useLocation } from 'react-router-dom'
 import { IoMenu, IoMenuSharp } from 'react-icons/io5'
-import { GiCancel } from 'react-icons/gi'
-import { auth } from '../../FireBase/FireBase'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { FaCircleUser } from 'react-icons/fa6'
 import { BiStar } from 'react-icons/bi'
 import { MdCancel } from 'react-icons/md'
 
 const NavBar = () => {
-  const [user, loading, error] = useAuthState(auth)
   const [showNav, setShowNav] = useState(false)
   const [activeDropdown, setactiveDropdown] = useState(false)
   const {isOpen, onOpen, onClose} = useDisclosure()
   const [isLargerThan769] = useMediaQuery('(min-width: 769px)')
-  // const [isLargerThan800] = useMediaQuery('(min-width: 1349px)')
-  // const {handleLogout, isLoggingOut} = useLogout()
   const {pathname} = useLocation()
   useEffect(() => {
     setShowNav(false)
@@ -32,7 +23,7 @@ const NavBar = () => {
   }, [showNav])
 
   return (<>
-    <Box minW={'100vw'}>
+    <Box minW={'100vw'} bg={'transparent'}>
       <Container maxW={'8xl'}>
         <Flex pt={2} alignItems={'center'} color={'white'} justifyContent={'space-between'}>
           <Box display={'flex'} alignItems={'center'} gap={1} >

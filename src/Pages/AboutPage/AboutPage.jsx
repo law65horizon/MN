@@ -101,6 +101,7 @@ const AboutPage = () => {
                     <AspectRatio maxW={'full'} ratio={3/3} maxH={'450px'}>
                       <Image
                         src='/Aae.jpg'
+                        loading='lazy'
                         objectFit={'cover'}
                         objectPosition={'center center'}
                       />
