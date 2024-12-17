@@ -62,7 +62,7 @@ const ContactPage = () => {
           //import.meta.env.PUBLIC_KEY // Replace with your EmailJS Public Key
         )
         showToast('Success', 'Sent successfully', 'success')
-        // setInputs({inputs, fullname: '', message: '', subject: '', email: ''})
+        setInputs({inputs, fullname: '', message: '', subject: '', email: '', reply_to})
       } catch (error) {
         showToast('Error', error.message, 'error')
       } finally {
