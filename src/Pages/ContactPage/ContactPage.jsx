@@ -1,6 +1,7 @@
 import { Box, Button, Container, Heading, Input, Link, Textarea } from '@chakra-ui/react'
 import React, { useState } from 'react'
 // import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser'
 // import { Hero } from '../../Components/Hero/Hero'
 
 import { BiMailSend, BiPhoneCall } from 'react-icons/bi'
@@ -50,7 +51,7 @@ const ContactPage = () => {
       // console.log('dois')
       try {
         // init('T6UiuUR6DYaW01m4R')
-        send(
+        emailjs.send(
           // import.meta.env.SERVICE_ID, // Replace with your EmailJS Service ID
           'service_vzaogtz', //import.meta.env.TEMPLATE_ID, // Replace with your EmailJS Template ID
           'template_wrjpk88',
