@@ -7,7 +7,7 @@ const CTA = () => {
   return (
 
     <Box display={'flex'} pb={'6'} w={'full'} h={'500px'} alignItems={'center'} justifyContent={'center'}>
-        <Box className='hero' zIndex={0} backgroundImage={`url('/home-hero-bg.jpg')`}>
+        <Box className='hero' zIndex={0} backgroundImage={`url('/home-hero-bg.webp')`}>
 
           <Box color={'white'} height={'full'} display={'flex'} alignItems={'center'} position={'relative'} zIndex={0}>
             <Container maxW={'8xl'}>

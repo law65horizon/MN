@@ -19,21 +19,27 @@ const HomePage = () => {
    and within budget`
   const portfolio = [
     {
-      img_scr: '/12.PNG',
-      full_img_src: '/13.WEBP',
+      img_scr: '/housings_sample.webp',
+      full_img_src: '/housings.webp',
       text: 'housing solutions hub',
       link: '/me/#experiences'
     },
     {
-      img_scr: '/13.WEBP',
-      full_img_src: '/13.WEBP',
-      text: 'michael\'s agency',
+      img_scr: '/furniture_sample.webp',
+      full_img_src: '/furniture.webp',
+      text: 'wood works',
       link: '/me/#experiences'
     },
     {
-      img_scr: '/11.PNG',
-      full_img_src:'/11.PNG',
+      img_scr: '/flora_sample.webp',
+      full_img_src: '/flora.webp',
       text: 'flora',
+      link: '/me/#experiences'
+    },
+    {
+      img_scr: '/engineering_sample.webp',
+      full_img_src: '/engineering.webp',
+      text: 'apexX',
       link: '/me/#experiences'
     },
   ]

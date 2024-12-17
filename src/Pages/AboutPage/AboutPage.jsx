@@ -67,7 +67,6 @@ const AboutPage = () => {
  
   return (
     <Box> 
-        {/* <Hero backgroundImage={'../../../public/why-choose-us.jpg'}/> */}
         <Hero backgroundImage={'/why-choose-us.webp'} heading={'Welcome to michaeldev.com'} text={hero_text} 
          button={{text: 'get started', link: '/contact'}}
         />
@@ -100,7 +99,7 @@ const AboutPage = () => {
                     </Text>
                     <AspectRatio maxW={'full'} ratio={3/3} maxH={'450px'}>
                       <Image
-                        src='/Aae.jpg'
+                        src='/Aae.webp'
                         loading='lazy'
                         objectFit={'cover'}
                         objectPosition={'center center'}

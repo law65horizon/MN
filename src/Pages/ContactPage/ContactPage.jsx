@@ -18,6 +18,7 @@ const ContactPage = () => {
         fullname: '',
         email: '',
         subject: '',
+        reply_to: '',
         message: ''
     })
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -49,9 +50,11 @@ const ContactPage = () => {
       if(isLoading) return
       setIsloading(true)
       // console.log('dois')
+      setInputs({...inputs, reply_to: inputs.email})
       try {
-        // init('T6UiuUR6DYaW01m4R')
-        emailjs.send(
+        init('T6UiuUR6DYaW01m4R')
+        console.log(inputs)
+        send(
           // import.meta.env.SERVICE_ID, // Replace with your EmailJS Service ID
           'service_vzaogtz', //import.meta.env.TEMPLATE_ID, // Replace with your EmailJS Template ID
           'template_wrjpk88',

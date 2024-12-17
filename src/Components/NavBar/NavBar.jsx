@@ -26,7 +26,7 @@ const NavBar = () => {
     <Box minW={'100vw'} bg={'transparent'}>
       <Container maxW={'8xl'}>
         <Flex pt={2} alignItems={'center'} color={'white'} justifyContent={'space-between'}>
-          <Box display={'flex'} alignItems={'center'} gap={1} >
+          <Box display={'flex'} alignItems={'center'} gap={1} as={RouterLink} to={!isLargerThan769 ? '/': null}>
            <Box display={'flex'} justifyContent={'center'} alignItems={'center'} p={2} bg={'white'}>
             <BiStar size={30} color='black'/>
            </Box>
