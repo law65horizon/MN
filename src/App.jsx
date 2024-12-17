@@ -4,7 +4,6 @@ import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import PageLayout from './Layout/PageLayout/PageLayout'
 import HomePage from './Pages/HomePage/HomePage'
-import { useAuthState } from 'react-firebase-hooks/auth'
 import AboutPage from './Pages/AboutPage/AboutPage'
 import ContactPage from './Pages/ContactPage/ContactPage'
 
