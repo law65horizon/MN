@@ -18,7 +18,7 @@ const Hero = ({backgroundImage, heading, text, button}) => {
       // borderRadius={'4px'}
     >
       <Box display={'flex'} w={'full'} h={'80vh'} alignItems={'center'} justifyContent={'center'}>
-        <Box className='hero' zIndex={0} backgroundImage={`url('${backgroundImage}')`}>
+        <Box className='hero' zIndex={0} loading={'lazy'} backgroundImage={`url('${backgroundImage}')`}>
 
           <Box mt={'100px'} color={'white'} position={'relative'} zIndex={0}>
             <Container maxW={'8xl'}>
