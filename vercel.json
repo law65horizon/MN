@@ -2,7 +2,7 @@
 	"rewrites": [{ "source": "/(.*)", "destination": "/" }],
 	"headers": [
     {
-      "source": "/path/to/yourfile.xml",
+      "source": "/sitemap.xml",
       "headers": [
         {
           "key": "Content-Type",
