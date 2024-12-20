@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://michealnana.vercel.app/</loc>
-  <lastmod>2024-12-19T22:52:07+00:00</lastmod>
+	<loc>https://michealnana.vercel.app/</loc>
+	<lastmod>2024-12-20T11:15:02+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://michealnana.vercel.app/me</loc>
-  <lastmod>2024-12-20T08:17:38+00:00</lastmod>
+	<loc>https://michealnana.vercel.app/index.html</loc>
+	<lastmod>2024-12-20T11:15:02+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-<loc>https://michealnana.vercel.app/contact</loc>
-<lastmod>2024-12-20T08:17:38+00:00</lastmod>
+	<loc>https://michealnana.vercel.app/me</loc>
+	<lastmod>2024-12-20T11:15:02+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
-
-
-
-
+<url>
+	<loc>https://michealnana.vercel.app/contact</loc>
+	<lastmod>2024-12-20T11:15:02+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
 </urlset>
