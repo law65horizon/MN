@@ -1,20 +1,19 @@
 import { AspectRatio, Box, Button, Container, Divider, Heading, Image, Link, ListItem, Text, UnorderedList, useMediaQuery } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import { BiGlobe, BiWorld } from 'react-icons/bi'
+import { BiWorld } from 'react-icons/bi'
 import { BsArrowUpRight } from 'react-icons/bs'
 import { GiDeliveryDrone, GiStarShuriken } from 'react-icons/gi'
-import { DiHtml5, DiJavascript, DiJavascript1, DiReact } from 'react-icons/di'
+import { DiHtml5, DiReact } from 'react-icons/di'
 import SectionTag from '../../Components/SUB/SectionTag'
-import { FaPenToSquare, FaResearchgate } from 'react-icons/fa6'
-import { MdDeveloperBoard } from 'react-icons/md'
+import { FaFire, FaPenToSquare, FaResearchgate } from 'react-icons/fa6'
 import { GrDeploy } from 'react-icons/gr'
-import { CiDeliveryTruck, CiSettings } from 'react-icons/ci'
-import { SiDiscover } from 'react-icons/si'
-import { RiCompassDiscoverLine } from 'react-icons/ri'
+import { CiSettings } from 'react-icons/ci'
 import { GoTriangleDown, GoTriangleUp } from 'react-icons/go'
 import Hero from '../../Components/Hero/Hero'
 import { IoFlashOutline } from 'react-icons/io5'
 import { Link as RouterLink } from 'react-router-dom'
+import { RiJavascriptFill } from 'react-icons/ri'
+import { SiChakraui } from 'react-icons/si'
 const AboutPage = () => {
   const [isLargerThan500] = useMediaQuery('(min-width: 500px)')
   const dev_approach = [
@@ -63,7 +62,50 @@ const AboutPage = () => {
     your vision and objectives.`
   const client_focus_text = `Whether you're in real estate, retail, or any field, I approach every project with a deep commitment to 
     understanding your specific needs. I strive to create solutions that not only look great but drive business results, focusing on 
-    usability, performance, and scalability. My goal is to make the process smooth, efficient, and rewarding for every client.”`
+    usability, performance, and scalability. My goal is to make the process smooth, efficient, and rewarding for every client.`
+  
+  const experiences = [
+    {
+      project_name: 'housing solutions hub',
+      period: 'August 2024 - November 2024',
+      role: 'Full Stack Developer',
+      desc: `This application provides a seamless experience for managing real estate properties, connecting potential buyers, sellers, and agents. Built with a focus on user-friendly design and efficient functionality, the platform streamlines property listings, search, and contact management for a better user experience.`,
+      technologies: [
+        [<RiJavascriptFill color='yellow' size={24}/>, 'JavaScript'], 
+        [<DiReact size={24} color='#3182CE' />, 'React'],
+        [<FaFire size={24} color='yellow' />, 'Firebase'],
+        [<DiHtml5 size={24} color='yellow' />, 'HTML'],
+        [<SiChakraui size={24} color='rgb(46 145 165)'/>, 'Chakra UI'],
+      ],
+      link: 'https://housing-henna.vercel.app/',
+      features: [
+        ['Property Listings:', `A dynamic interface to add, edit, and showcase properties with detailed descriptions, images, and pricing.`],
+        ['Advanced Search & Filter:', `Enables users to search properties by location, price range, property type, and other criteria.`],
+        ['User Authentication:', 'Secure login and registration functionality for agents, buyers, and sellers.'],
+        ['Contact Management:', ' Features a messaging system or contact form to connect buyers and sellers directly.']
+      ]
+    },
+    {
+      project_name: 'insider',
+      period: 'Feb 2024 - April 2024',
+      role: 'Full Stack Developer',
+      desc: 'A dynamic and customizable blog platform designed for content creators to share ideas, engage with readers, and manage posts effortlessly. The platform combines a clean, intuitive interface with powerful backend functionality to deliver a seamless blogging experience.',
+      technologies: [
+        [<RiJavascriptFill color='yellow' size={24}/>, 'JavaScript'], 
+        [<DiReact size={24} color='#3182CE' />, 'React'],
+        [<FaFire size={24} color='yellow' />, 'Firebase'],
+        [<SiChakraui size={24} color='rgb(46 145 165)'/>, 'Chakra UI'],
+      ],
+      link: 'https://insider-alpha.vercel.app/',
+      features: [
+        ['Content Management:', `Easy-to-use tools for creating, editing, and deleting blog posts with rich text formatting.`],
+        ['Responsive Design:', `Fully responsive layout ensuring an optimal experience across devices.`],
+        ['User Authentication:', 'Secure login and registration functionality for agents, buyers, and sellers.'],
+        ['Search & Categories:', 'Allows readers to find posts quickly using search functionality and category filters.']
+      ]
+    }
+  ]
+  console.log(experiences)
  
   return (
     <Box> 
@@ -175,10 +217,10 @@ const AboutPage = () => {
                     <DiReact size={20} color='blue'/>
                     <Text> React</Text>
                   </ListItem>
-                  <ListItem bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
+                  <ListItem bg={'#1a1a1a'} w={'max-content'} p={2} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
                     alignItems={'center'} gap={1} justifyContent={'center'}
                   >
-                    <DiJavascript1 size={20}/>
+                    <RiJavascriptFill color='yellow' size={24}/>
                     <Text> JavaScript</Text>
                   </ListItem>
                   <ListItem bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
@@ -211,132 +253,75 @@ const AboutPage = () => {
               </Box>
             </Box>
           </Box>
-
-          <Box py={2} display={'flex'} flexDir={'column'} gap={'40px'} pt={'50px'}>
-           {[1,2].map((ele, index) => {
+            
+          {/* projects */}
+          <Box py={2} display={'flex'} flexDir={'column'} gap={'10px'} pt={'50px'}>
+           {experiences.map((ele, index) => {
             const [showDesignText, setShowDesignText] = useState(false)
+            const [showMore, setShowMore] = useState(false)
             return (<>
-            <Box display={'flex'} gap={8} flexDir={{base: 'column', md: 'row'}} justifyContent={'space-between'}>
+             <Box display={'flex'} gap={3} flexDir={{base: 'column', md: 'row'}} justifyContent={'space-between'}>
               <Box>
-                <Heading>Housing Solutions Hub</Heading>
-                <Text >Feb 2024 - present</Text>
+                <Heading textTransform={'capitalize'}> {ele.project_name} </Heading>
+                <Text > {ele.period} </Text>
               </Box>
               <Box>
-                <Text>
-                  Senior Full Stack Developer
-                </Text>
+                <Text> {ele.role} </Text>
               </Box>
               <Box w={{base:'full', md: '34.8%'}}>
                 <UnorderedList listStyleType={'none'} display={'flex'} gap={2} flexDir={'row'} flexWrap={'wrap'}>
-                  <ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      UI/Ux 
+                  {ele.technologies.map((ele) => (
+                   <ListItem>
+                    <Text bg={'#1a1a1a'} color={'#D3D3D3'} w={'max-content'} p={2} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
+                     alignItems={'center'} justifyContent={'center'} gap={1}
+                    >  
+                      {ele[0]}
+                      {ele[1]}
                     </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      Branding 
-                    </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      UI/Ux 
-                    </Text>
-                  </ListItem><ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      UI/Ux 
-                    </Text>
-                  </ListItem><ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      UI/Ux 
-                    </Text>
-                  </ListItem>
+                   </ListItem>
+                  ))}
                 </UnorderedList>
                 <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
-                  <Link display={'flex'} w={'max-content'} p={2} alignItems={'center'} justifyContent={'center'} mt={3} bg={'transparent'} gap={2} >
+                  <Link display={'flex'} w={'max-content'} p={2} alignItems={'center'} justifyContent={'center'} mt={3} 
+                   bg={'transparent'} gap={2} as={RouterLink} to={ele.link} target='_blank'
+                  >
                     <Text>View</Text>
                     <BsArrowUpRight />
                   </Link>
                   <Box display={'flex'} alignItems={'center'} cursor={'pointer'} onClick={() => setShowDesignText(!showDesignText)} 
                    justifyContent={'center'}
                   >
-                    {!showDesignText ? <GoTriangleDown size={50} /> : <GoTriangleUp size={50} /> }
+                    {!showDesignText ? <GoTriangleDown size={35} /> : <GoTriangleUp size={35} /> }
                   </Box>
                 </Box>
               </Box>
              </Box>
-             {showDesignText && (
-              <Text className='paragraph'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates rerum ullam repudiandae voluptate illo veritatis consequuntur saepe quam inventore dolore hic aliquam magni sint quasi eveniet quod, dolorem natus laboriosam.
+             {showDesignText && (<Box display={'flex'} gap={1} flexWrap={'wrap'}>
+              <Text className='paragraph' >
+                 {ele.desc}
+                 <span style={{cursor: 'pointer', color: 'gray'}} onClick={() => setShowMore(true)}>   ..more</span>
               </Text>
+              
+             </Box>)}
+             {showMore && (
+              <Box>
+                <Text fontWeight={'700'}>Key Features</Text>
+                <UnorderedList px={3} gap={2}>
+                  {ele?.features.map((ele) => (
+                    <ListItem>
+                      <b> {ele[0]} </b>
+                      {ele[1]}
+                    </ListItem>
+                  ))}
+                </UnorderedList>
+                <Box display={'flex'} justifyContent={'end'}>
+                <span style={{cursor: 'pointer', color: 'gray'}} onClick={() => setShowMore(false)}>   ..hide</span>
+                </Box>
+              </Box>
              )}
 
             <Divider my={'20px'} />
            </>)})}
-
-            <Box display={'flex'} gap={8} flexDir={{base: 'column', md: 'row'}} justifyContent={'space-between'}>
-              <Box>
-                <Heading>Housing Solutions Hub</Heading>
-                <Text >Feb 2024 - present</Text>
-              </Box>
-              <Box>
-                <Text>
-                  Senior Full Stack Developer
-                </Text>
-              </Box>
-              <Box w={{base:'full', md: '34.8%'}}>
-                <UnorderedList listStyleType={'none'} display={'flex'} gap={2} flexDir={'row'} flexWrap={'wrap'}>
-                  <ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      UI/Ux 
-                    </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      Branding 
-                    </Text>
-                  </ListItem>
-                  <ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      UI/Ux 
-                    </Text>
-                  </ListItem><ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      UI/Ux 
-                    </Text>
-                  </ListItem><ListItem>
-                    <Text bg={'#1a1a1a'} w={'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} 
-                     alignItems={'center'} justifyContent={'center'} 
-                    > 
-                      UI/Ux 
-                    </Text>
-                  </ListItem>
-                </UnorderedList>
-                <Link display={'flex'} w={'max-content'} p={2} alignItems={'center'} justifyContent={'center'} mt={3} bg={'transparent'} gap={2} >
-                  <Text>View</Text>
-                  <BsArrowUpRight />
-                </Link>
-              </Box>
-            </Box>
-            <Divider my={'20px'} />
           </Box>
          </Box>
 
