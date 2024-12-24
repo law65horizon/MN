@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Button, Container, Divider, Heading, Image, Link, ListItem, Text, UnorderedList, useMediaQuery } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { BiWorld } from 'react-icons/bi'
-import { BsArrowUpRight } from 'react-icons/bs'
+import { BsArrowUpRight, BsBootstrap } from 'react-icons/bs'
 import { GiDeliveryDrone, GiStarShuriken } from 'react-icons/gi'
 import { DiHtml5, DiReact } from 'react-icons/di'
 import SectionTag from '../../Components/SUB/SectionTag'
@@ -12,8 +12,10 @@ import { GoTriangleDown, GoTriangleUp } from 'react-icons/go'
 import Hero from '../../Components/Hero/Hero'
 import { IoFlashOutline } from 'react-icons/io5'
 import { Link as RouterLink } from 'react-router-dom'
-import { RiJavascriptFill } from 'react-icons/ri'
-import { SiChakraui } from 'react-icons/si'
+import { RiJavascriptFill, RiTailwindCssFill } from 'react-icons/ri'
+import { SiBootstrap, SiChakraui, SiJquery, SiTailwindcss } from 'react-icons/si'
+import PorfolioModal from '../../Components/Modals/PorfolioModal'
+import ShowImage from './showImage'
 const AboutPage = () => {
   const [isLargerThan500] = useMediaQuery('(min-width: 500px)')
   const dev_approach = [
@@ -64,6 +66,7 @@ const AboutPage = () => {
     understanding your specific needs. I strive to create solutions that not only look great but drive business results, focusing on 
     usability, performance, and scalability. My goal is to make the process smooth, efficient, and rewarding for every client.`
   
+
   const experiences = [
     {
       project_name: 'housing solutions hub',
@@ -103,9 +106,49 @@ const AboutPage = () => {
         ['User Authentication:', 'Secure login and registration functionality for agents, buyers, and sellers.'],
         ['Search & Categories:', 'Allows readers to find posts quickly using search functionality and category filters.']
       ]
+    },
+    {
+      project_name: 'ESG',
+      period: 'Sept 2023 - Late Sept 2023',
+      role: 'Front-end Developer',
+      desc: 'ESG is a landing page designed with a user-friendly interface to help investors navigate the complexities of ESG in capital markets with ease. Key features include:',
+      technologies: [
+        [<RiJavascriptFill color='yellow' size={24}/>, 'JavaScript'], 
+        [<DiHtml5 size={24} color='yellow' />, 'HTML'],
+        [<SiBootstrap size={24} color='purple'/>, 'Bootstrap'],
+      ],
+      item: {
+        full_img_src: '/flora.webp'
+      },
+      features: [
+        ['Intuitive Dashboard:', 'A clean, customizable dashboard that provides an at-a-glance overview of your ESG-focused investments, key metrics, and market trends.'],
+        ['Mobile-Responsive Design:', `Fully responsive layout ensuring an optimal experience across devices.`],
+        ['Personalized Insights:', 'Receive tailored recommendations and insights based on your investment preferences and ESG goals.'],
+      ]
+    },
+    {
+      project_name: 'wood works',
+      period: 'June 2023 - Late June 2023',
+      role: 'Front-end Developer',
+      desc: 'ESG is a landing page designed with a user-friendly interface to help investors navigate the complexities of ESG in capital markets with ease. Key features include:',
+      technologies: [
+        [<RiJavascriptFill color='yellow' size={24}/>, 'JavaScript'], 
+        [<DiHtml5 size={24} color='yellow' />, 'HTML'],
+        [<RiTailwindCssFill size={24} color='#3182CE'/>, 'Tailwind css'],
+        [<SiJquery size={24} color='#3182CE'/>, 'Jquery'],
+      ],
+      item: {
+        full_img_src: '/furniture.webp'
+      },
+      features: [
+        ['Intuitive Dashboard:', 'A clean, customizable dashboard that provides an at-a-glance overview of your ESG-focused investments, key metrics, and market trends.'],
+        ['Mobile-Responsive Design:', `Fully responsive layout ensuring an optimal experience across devices.`],
+        ['Personalized Insights:', 'Receive tailored recommendations and insights based on your investment preferences and ESG goals.'],
+      ]
     }
   ]
-  console.log(experiences)
+  // console.log(experiences)
+
  
   return (
     <Box> 
@@ -282,12 +325,18 @@ const AboutPage = () => {
                   ))}
                 </UnorderedList>
                 <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
-                  <Link display={'flex'} w={'max-content'} p={2} alignItems={'center'} justifyContent={'center'} mt={3} 
-                   bg={'transparent'} gap={2} as={RouterLink} to={ele.link} target='_blank'
-                  >
-                    <Text>View</Text>
-                    <BsArrowUpRight />
-                  </Link>
+                  {ele.link ? (
+                    <Link display={'flex'} w={'max-content'} p={2} alignItems={'center'} justifyContent={'center'} mt={3} 
+                     bg={'transparent'} gap={2} as={RouterLink} to={ele.link} target='_blank'
+                    >
+                      <Text>View</Text>
+                      <BsArrowUpRight />
+                    </Link>
+                  ) : (
+                    <Box>
+                      <ShowImage item={ele.item} />
+                    </Box>
+                  )}
                   <Box display={'flex'} alignItems={'center'} cursor={'pointer'} onClick={() => setShowDesignText(!showDesignText)} 
                    justifyContent={'center'}
                   >

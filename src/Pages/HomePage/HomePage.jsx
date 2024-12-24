@@ -25,9 +25,9 @@ const HomePage = () => {
       link: '/me/#experiences'
     },
     {
-      img_scr: '/furniture_sample.webp',
-      full_img_src: '/furniture.webp',
-      text: 'wood works',
+      img_scr: '/insider_sample.webp',
+      full_img_src: '/insider.webp',
+      text: 'Insider',
       link: '/me/#experiences'
     },
     {
@@ -36,10 +36,16 @@ const HomePage = () => {
       text: 'flora',
       link: '/me/#experiences'
     },
+    // {
+    //   img_scr: '/engineering_sample.webp',
+    //   full_img_src: '/engineering.webp',
+    //   text: 'apexX',
+    //   link: '/me/#experiences'
+    // },
     {
-      img_scr: '/engineering_sample.webp',
-      full_img_src: '/engineering.webp',
-      text: 'apexX',
+      img_scr: '/furniture_sample.webp',
+      full_img_src: '/furniture.webp',
+      text: 'wood works',
       link: '/me/#experiences'
     },
   ]

@@ -1,13 +1,35 @@
 import { Box, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, useDisclosure } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import { BsArrowRight } from 'react-icons/bs'
 
-const PorfolioModal = ({items, index}) => {
+const PorfolioModal = ({items, index, isClicked, setIsClicked, diff}) => {
     const {isOpen, onClose, onOpen} = useDisclosure()
-    console.log(items.link)
+    // console.log(items.link)
+    useEffect(() => {
+      if(isClicked) {
+        onOpen()
+        console.log(items.full_img_src)
+      }
+    }, [isClicked])
+    function close() {
+      if(diff) {
+        setIsClicked(false)
+      }
+      onClose()
+    }
+    // function open() {
+    //   if(diff) {
+    //     setIsClicked(false)
+    //   }
+    //   onOpen()
+    // }
+    // onClose(
+    //   setIsClicked(false)
+    // )
   return (<>
-    <Box w={'500px'} minW={{base: 'full', sm: '500px'}} key={index} minH={'650px'} >
+    {items?.img_scr && 
+      <Box w={'500px'} minW={{base: 'full', sm: '500px'}} key={index} minH={'650px'} >
         <Box className='resize_img' backgroundImage={`url('.${items.img_scr}')`} cursor={'pointer'} onClick={onOpen}></Box>
         <Box display={'flex'} mt={4} h={'30px'} gap={2} alignItems={'center'}
           _hover={{fontSize: '25px',}}
@@ -17,8 +39,9 @@ const PorfolioModal = ({items, index}) => {
                <BsArrowRight size={24} style={{marginTop: '4px'}}/>
             </Box>
         </Box>
-    </Box>
-    <Modal isOpen={isOpen} onClose={onClose} isCentered={true} blockScrollOnMount={true}>
+      </Box>
+    }
+    <Modal isOpen={isOpen} onClose={close} isCentered={true} blockScrollOnMount={true}>
         <ModalOverlay />
         <ModalContent maxW={'600px'} overflow={'scroll'} top={'20px'} bg={'rgba(255, 255, 255, 0.15)'} className='noscrollbar'>
             <ModalCloseButton />

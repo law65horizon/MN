@@ -3,7 +3,7 @@ import React from 'react'
 import { BsArrowUpRight } from 'react-icons/bs'
 import { Link as RouterLink } from 'react-router-dom'
 
-const CTA = () => {
+const CTA = ({disabled}) => {
   return (
 
     <Box display={'flex'} pb={'6'} w={'full'} h={'500px'} alignItems={'center'} justifyContent={'center'}>
@@ -19,7 +19,11 @@ const CTA = () => {
                   I’m here to help bring your ideas to life.
                 </Text>
                 <Box >
-                  <Button bg={'white'} color={'black'} p={3} fontSize={'20px'} textDecor={'underline'} rightIcon={<BsArrowUpRight size={20}/>} as={RouterLink} to={'/contact'}>Let's Talk</Button>
+                  <Button bg={'white'} color={'black'} p={3} fontSize={'20px'} textDecor={'underline'} rightIcon={<BsArrowUpRight size={20}/>} 
+                   as={!disabled && RouterLink} to={!disabled && '/contact'}
+                  >
+                    Let's Talk
+                  </Button>
                 </Box>
               </VStack>
             </Container>

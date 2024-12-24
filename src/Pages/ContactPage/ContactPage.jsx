@@ -112,13 +112,13 @@ const ContactPage = () => {
                         </Box>
                         <Box display={'flex'} gap={1} alignItems={'center'}>
                             <BsGithub size={24} />
-                            <Link href='https://github.com'>michaelnana656@gmail.com</Link>
+                            <Link href='https://github.com/law65horizon/'>Law65horizon</Link>
                         </Box>
                     </Box>
                 </Box>
             </Box>
         </Container>
-        <CTA />
+        <CTA disabled={true} />
     </Box>
   )
 }
