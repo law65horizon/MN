@@ -14,8 +14,7 @@ import { IoFlashOutline } from 'react-icons/io5'
 import { Link as RouterLink } from 'react-router-dom'
 import { RiJavascriptFill, RiTailwindCssFill } from 'react-icons/ri'
 import { SiBootstrap, SiChakraui, SiJquery, SiTailwindcss } from 'react-icons/si'
-import PorfolioModal from '../../Components/Modals/PorfolioModal'
-import ShowImage from './showImage'
+import ShowImage from './ShowImage'
 const AboutPage = () => {
   const [isLargerThan500] = useMediaQuery('(min-width: 500px)')
   const dev_approach = [
