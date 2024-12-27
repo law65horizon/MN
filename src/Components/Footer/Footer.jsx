@@ -20,8 +20,8 @@ const Footer = () => {
                     <Link bg={'#1a1a1a'} w={!isLargerThan860 ? 'calc(50% - 0.5rem)' : 'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} alignItems={'center'} justifyContent={'center'} > Contact </Link>
                 </Box>
                 <Box>
-                    <Heading>
-                    <a href="mailto:michaelnana656@gmail.com" target='_blank'>michaelnana656@gmail.com</a>
+                    <Heading fontSize={{base: 'clamp(20px, 2.5vw, 30px)'}}>
+                        <a href="mailto:michaelnana656@gmail.com" target='_blank'>michaelnana656@gmail.com</a>
                     </Heading>
                 </Box>
             </Box>
