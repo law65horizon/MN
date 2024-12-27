@@ -20,7 +20,9 @@ const Footer = () => {
                     <Link bg={'#1a1a1a'} w={!isLargerThan860 ? 'calc(50% - 0.5rem)' : 'max-content'} p={3} borderLeftRadius={'10px'} borderRightRadius={'10px'} display={'flex'} alignItems={'center'} justifyContent={'center'} > Contact </Link>
                 </Box>
                 <Box>
-                    <Heading>hello@michaeldev.com</Heading>
+                    <Heading>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=michaelnana656@gmail.com" target='_blank'>michaelnana656@gmail.com</a>
+                    </Heading>
                 </Box>
             </Box>
         </Container>
