@@ -108,7 +108,7 @@ const HomePage = () => {
           </>))}
         </Container>
         
-        <Box w={'full'} as={RouterLink} display={'flex'} pt={5} gap={4} justifyContent={'center'}>
+        <Box w={'full'} as={RouterLink} to={'me/#experiences'} display={'flex'} pt={5} gap={4} justifyContent={'center'}>
           <Text color={'gray'}>Check out more</Text>
           <Box display={'flex'} alignItems={'center'} gap={1}>
             <BsArrowRight  size={24}/>
