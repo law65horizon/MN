@@ -54,7 +54,7 @@ const AboutPage = () => {
    I combine creativity and technical expertise to design and build custom websites that reflect your unique vision. 
    Let’s make your online presence unforgettable.
   `
-  const explore_design_text = `With over 3 years of experience in web development, I’ve worked on diverse projects ranging from e-commerce 
+  const explore_design_text = `With over 2 years of experience in web development, I’ve worked on diverse projects ranging from e-commerce 
   platforms and SaaS applications to portfolio sites and blogs. I started my journey as a self-taught developer, driven by curiosity and 
   creativity, and have since worked with clients from various industries. Each project has strengthened my understanding of best practices 
   and provided fresh insights into the latest development trends.`
@@ -163,7 +163,7 @@ const AboutPage = () => {
                 <Box width={{base: 'full', md: '55%'}} display={'flex'} flexDir={'column'} gap={2}>
                     <Heading pb={7}>About Me</Heading>
                     <Text>
-                       I have been working in the web design industry for over 5 years, and I have experience working with clients from 
+                       I have been working in the web design industry for over 2 years, and I have experience working with clients from 
                        a wide range of industries. I am passionate about creating websites that are not only visually appealing but also
                         optimized for speed, security, and performance. I stay up-to-date with the latest web design trends and technologies
                          to ensure that my clients receive the best possible service.
