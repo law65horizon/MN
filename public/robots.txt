@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /private/
 Allow: /
-Sitemap: https://www.michaelnana.vercel.app/sitemap.xml 
+Sitemap: https://www.michaelKikamme.vercel.app/sitemap.xml 
