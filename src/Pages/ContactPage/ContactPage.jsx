@@ -104,7 +104,7 @@ const ContactPage = () => {
                     <Box pt={4} pl={2} display={'flex'} flexDir={'column'} gap={3} fontSize={'20px'}>
                         <Box display={'flex'} gap={1} alignItems={'center'}>
                             <BiMailSend size={24} />
-                            <Link>michaelnana656@gmail.com</Link>
+                            <Link href="mailto:michaelkikamme@gmail.com" target='_blank'>michaelkikamme@gmail.com</Link>
                         </Box>
                         <Box display={'flex'} gap={1} alignItems={'center'}>
                             <BiPhoneCall size={24} />

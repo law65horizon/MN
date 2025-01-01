@@ -21,7 +21,7 @@ const Footer = () => {
                 </Box>
                 <Box>
                     <Heading fontSize={{base: 'clamp(20px, 2.5vw, 30px)'}}>
-                        <a href="mailto:michaelnana656@gmail.com" target='_blank'>michaelnana656@gmail.com</a>
+                        <a href="mailto:michaelkikamme@gmail.com" target='_blank'>michaelkikamme@gmail.com</a>
                     </Heading>
                 </Box>
             </Box>
