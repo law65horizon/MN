@@ -65,7 +65,7 @@ const AboutPage = () => {
   const client_focus_text = `Whether you're in real estate, retail, or any field, I approach every project with a deep commitment to 
     understanding your specific needs. I strive to create solutions that not only look great but drive business results, focusing on 
     usability, performance, and scalability. My goal is to make the process smooth, efficient, and rewarding for every client.`
-  
+   
 
   const experiences = [
     {

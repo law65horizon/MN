@@ -46,7 +46,7 @@ const ContactPage = () => {
       if(!navigator.onLine) {
         showToast('Error', 'Client is offline', 'error')
         return
-      }
+      } 
       if(isLoading) return
       setIsloading(true)
       // console.log('dois')
