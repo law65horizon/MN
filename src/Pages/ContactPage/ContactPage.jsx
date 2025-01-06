@@ -58,7 +58,7 @@ const ContactPage = () => {
           // import.meta.env.SERVICE_ID, // Replace with your EmailJS Service ID
           'service_vzaogtz', //import.meta.env.TEMPLATE_ID, // Replace with your EmailJS Template ID
           'template_wrjpk88',
-          inputs,
+          {...inputs},
           //import.meta.env.PUBLIC_KEY // Replace with your EmailJS Public Key
         )
         showToast('Success', 'Sent successfully', 'success')
